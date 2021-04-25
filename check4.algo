@@ -1,0 +1,57 @@
+PROCEDURE sawp(VAR x , VAR y :INTEGER)
+VAR
+   tem : INTEGER;
+BEGIN
+   x:=y;
+   y:=tem;
+   tem:=x;
+END
+
+
+ALGORITHM TRI SIMPLE
+VAR
+      tab : ARRAY_OF INTEGER[n];
+      i,j,min:INTEGER;
+      min := i;
+
+BEGIN
+    Read(tab)
+    FOR i FROM 0 TO n-1 STEP step  DO
+        FOR j FROM i TO n-i-1 STEP step  DO
+           IF (tab[j]<tab[min]) THEN
+               min := j;
+           END_IF
+        END_FOR
+    END_FOR
+    swap(tab[min],tab[j]);
+END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
